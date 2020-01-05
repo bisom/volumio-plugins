@@ -109,8 +109,9 @@ Group=volumio
 ExecStart=/usr/bin/startx /etc/X11/Xsession /opt/volumiokiosk.sh -- -nocursor
 [Install]
 WantedBy=multi-user.target
-" > /lib/systemd/system/volumio-kiosk.service
-sudo systemctl daemon-reload
+" > /etc/systemd/system/volumio-kiosk.service
+sudo systemctl enable volumio-kiosk.service
+sudo service volumio-kiosk restart
 
 echo "Allowing volumio to start an xsession"
 sudo /bin/sed -i "s/allowed_users=console/allowed_users=anybody/" /etc/X11/Xwrapper.config
