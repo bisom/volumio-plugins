@@ -28,7 +28,8 @@ if [ ! -f $INSTALLING ]; then
 		sed 's|${EXTRA_PARAMS}||g' -i $TMPUNIT
 		
 		#mv $TMPUNIT /etc/systemd/system/squeezelite.service
-		ln -fs /data/plugins/music_service/squeezelite/squeezelite.service /etc/systemd/system/squeezelite.service		
+		ln -fs /data/plugins/music_service/squeezelite/squeezelite.service /etc/systemd/system/squeezelite.service
+		service squeezelite restart
 		systemctl daemon-reload
 		
 	else
