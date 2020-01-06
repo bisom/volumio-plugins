@@ -1,6 +1,7 @@
 #!/bin/bash
 
-HW=$(awk '/VOLUMIO_HARDWARE=/' /etc/*-release | sed 's/VOLUMIO_HARDWARE=//' | sed 's/\"//g')
+#HW=$(awk '/VOLUMIO_HARDWARE=/' /etc/*-release | sed 's/VOLUMIO_HARDWARE=//' | sed 's/\"//g')
+HW=pi
 
 if [ "$HW" = "pi" ];
 then
