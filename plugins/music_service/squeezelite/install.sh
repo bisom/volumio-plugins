@@ -30,7 +30,6 @@ if [ ! -f $INSTALLING ]; then
 		#mv $TMPUNIT /etc/systemd/system/squeezelite.service
 		ln -fs /data/plugins/music_service/squeezelite/squeezelite.service /etc/systemd/system/squeezelite.service
 		service squeezelite restart
-		systemctl daemon-reload
 		
 	else
 		echo "Plugin already exists, not continuing."
